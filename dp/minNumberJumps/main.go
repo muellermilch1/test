@@ -27,6 +27,7 @@ func min(a, b int) int {
 	return b
 }
 
+//for demonstration
 func main() {
 	fmt.Println(MinNumberOfJumps([]int{3, 4, 2, 1, 2, 3, 7, 1, 1, 1, 3}))
 }
