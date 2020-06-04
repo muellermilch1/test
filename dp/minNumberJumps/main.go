@@ -9,10 +9,9 @@ import (
 //needed to get to the end of the array
 func MinNumberOfJumps(array []int) int {
 	dp := make([]int, len(array))
-	for i := range dp {
+	for i := 1; i < len(dp); i++ {
 		dp[i] = math.MaxInt64
 	}
-	dp[0] = 0
 	for i, v := range array {
 		for j := 1; j <= v && j+i < len(array); j++ {
 			dp[i+j] = min(dp[i+j], dp[i]+1)
